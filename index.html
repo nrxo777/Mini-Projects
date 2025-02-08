@@ -19,10 +19,15 @@
             background-color: #6E8E59;
             color: azure;
         }
+        #bg-color{
+            background-color: #6E8E59;
+            color: azure;
+        }
         #stop{
             background-color: #780C28;
             color: azure;
         }
+
         #time{
             border: 10px;
             border-color: #123524;
@@ -36,14 +41,18 @@
 
     </style>
 </head>
-<body>
-    <h2>Start & Pause</h2>
+<body id="hero">
+    <h2>Start & Stop</h2>
     <button class="btn" id="start">START</button>
     <button class="btn" id="stop">STOP</button>
-    <p id="time"></p>
+    <p id="time">0</p>
+    <hr>
+    <h2>BG Changer</h2>
+    <button class="btn" id="bg-color">Random BG Color</button>
+
 
     <script>
-        
+        // ******************** Timer ********************
         let start_btn = document.querySelector('#start');
         let stop_btn = document.querySelector('#stop');
 
@@ -66,8 +75,24 @@
                             
         });        
 
+        
+        // ******************** BG Changer ********************
+        const change_btn = document.querySelector('#bg-color');
+        const hero = document.querySelector('#hero');
+
+        let random_color = function(i){
+            let hex = '0123456789abcdef';
+            let hash = '#';
+            for (let i = 0; i < 6; i++) {
+                hash += hex[Math.floor(Math.random() * 16)]
+            }
+            return hash;
+        };
 
 
+        change_btn.addEventListener('click', function(cb){
+            hero.style.backgroundColor = random_color();
+        })
     </script>
 </body>
 </html>
