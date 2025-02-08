@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Start & Pause</title>
+    <style>
+        body{
+            margin: 50px;
+            text-align: center;
+            background-color: #EAFAEA;
+            color: #123524;
+        }
+        .btn{
+            margin: 20px;
+        }
+        #start{
+            background-color: #6E8E59;
+            color: azure;
+        }
+        #stop{
+            background-color: #780C28;
+            color: azure;
+        }
+        #time{
+            border: 10px;
+            border-color: #123524;
+            border-style: solid;
+            border-width: 3px;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 7px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Start & Pause</h2>
+    <button class="btn" id="start">START</button>
+    <button class="btn" id="stop">STOP</button>
+    <p id="time"></p>
+
+    <script>
+        
+        let start_btn = document.querySelector('#start');
+        let stop_btn = document.querySelector('#stop');
+
+        start_btn.addEventListener('click', function(s){
+            
+            let old_time = 1
+
+                let start_timing = (i) => {
+                    
+                    let para_tag = document.querySelector('p').innerText = old_time;
+                    old_time++;
+                };
+
+            let pause_time = setInterval(start_timing, 1000);
+
+            stop_btn.addEventListener('click', function(p){
+
+                clearTimeout(pause_time);                
+            })
+                            
+        });        
+
+
+
+    </script>
+</body>
+</html>
