@@ -1,0 +1,41 @@
+body{
+    margin: 50px;
+    text-align: center;
+    background-color: #EAFAEA;
+    color: #123524;
+}
+.btn{
+    margin: 20px;
+}
+#start{
+    background-color: #6E8E59;
+    color: azure;
+}
+#bg-color{
+    background-color: #6E8E59;
+    color: azure;
+}
+#stop{
+    background-color: #780C28;
+    color: azure;
+}
+/* ---------------- project 03 ---------------- */
+#start-chan{
+    background-color: #6E8E59;
+    color: azure;
+}
+#stop-chan{
+    background-color: #780C28;
+    color: azure;
+}
+
+#time{
+    border: 10px;
+    border-color: #123524;
+    border-style: solid;
+    border-width: 3px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 7px;
+
+}
