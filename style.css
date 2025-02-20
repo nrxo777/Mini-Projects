@@ -39,3 +39,35 @@ body{
     border-radius: 7px;
 
 }
+
+/* ---------------- project 04 ---------------- */
+
+*{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    margin-bottom: 10vh;
+}
+
+span {
+    border: 1px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px;
+    margin-top: 10px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+#lightsalmon{
+    background-color: lightsalmon;
+}
+#pink{
+    background-color: pink;
+}
+#lawngreen{
+    background-color: lawngreen;
+}
+#violet{
+    background-color: violet;
+}

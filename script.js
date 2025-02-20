@@ -61,5 +61,16 @@ start_chan.addEventListener('click', function(sc){
     })    
 })
 
+// ******************** BG Changer Specific ********************
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.button');
+
+    buttons.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            let color = e.target.id;
+            document.body.style.backgroundColor = color
+            });
+    });
+});
